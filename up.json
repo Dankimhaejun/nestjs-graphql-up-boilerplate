@@ -24,7 +24,7 @@
   "stages": {
     "development": {
       "proxy": {
-        "command": "nest start -e 'node dist/dev-server'"
+        "command": "nest start --debug -e 'node dist/dev-server'"
       }
     },
     "staging": {
