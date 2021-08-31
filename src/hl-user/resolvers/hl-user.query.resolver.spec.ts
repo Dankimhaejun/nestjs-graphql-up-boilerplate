@@ -1,10 +1,10 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test, TestingModule } from "@nestjs/testing";
 
-import { HlUserQueryResolver } from './hl-user.query.resolver';
+import { HlUserQueryResolver } from "./hl-user.query.resolver";
 
-import { HlUserQueryService } from '../services/hl-user.query.service';
+import { HlUserQueryService } from "../services/hl-user.query.service";
 
-describe('HlUserQueryResolver', () => {
+describe("HlUserQueryResolver", () => {
   let resolver: HlUserQueryResolver;
 
   beforeEach(async () => {
@@ -15,7 +15,7 @@ describe('HlUserQueryResolver', () => {
     resolver = module.get<HlUserQueryResolver>(HlUserQueryResolver);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(resolver).toBeDefined();
   });
 });

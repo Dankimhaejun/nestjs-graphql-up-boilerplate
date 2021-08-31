@@ -1,5 +1,6 @@
-import { Resolver, Query } from '@nestjs/graphql';
-import { HlUserQueryService } from '../services/hl-user.query.service';
+import { Resolver, Query } from "@nestjs/graphql";
+
+import { HlUserQueryService } from "../services/hl-user.query.service";
 
 @Resolver(() => String)
 export class HlUserQueryResolver {
@@ -7,6 +8,8 @@ export class HlUserQueryResolver {
 
   @Query(() => String)
   hello(): string {
-    return 'some';
+    console.log("hlUserQueryService :>> ", this.hlUserQueryService);
+    console.log('"hello" :>> ', "hello");
+    return "some";
   }
 }

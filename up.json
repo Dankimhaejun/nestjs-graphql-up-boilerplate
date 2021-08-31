@@ -13,19 +13,18 @@
     ],
     "postdeploy": [
       "rm -rf node_modules",
-      "yarn",
-      "yarn autoclean --force"
+      "yarn"
     ]
   },
   "proxy": {
-    "command": "nest start -e 'node dist/dev-server'",
+    "command": "node dist/main",
     "timeout": 25,
     "listen_timeout": 25
   },
   "stages": {
     "development": {
       "proxy": {
-        "command": "node dist/dev-server"
+        "command": "nest start -e 'node dist/dev-server'"
       }
     },
     "staging": {

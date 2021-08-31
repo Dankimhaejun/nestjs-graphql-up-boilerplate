@@ -1,16 +1,15 @@
 import { Test, TestingModule } from "@nestjs/testing";
+import { HLBrandQueryService } from "./hl-brand.query.service";
 
-import { HlUserQueryService } from "./hl-user.query.service";
-
-describe("HlUserQueryService", () => {
-  let service: HlUserQueryService;
+describe("HLBrandQueryService", () => {
+  let service: HLBrandQueryService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [HlUserQueryService],
+      providers: [HLBrandQueryService],
     }).compile();
 
-    service = module.get<HlUserQueryService>(HlUserQueryService);
+    service = module.get<HLBrandQueryService>(HLBrandQueryService);
   });
 
   it("should be defined", () => {
